@@ -9,8 +9,20 @@
   --primaire: #9356DC;
   --secondaire: #FF79DA ;
   --tertiaire: #99E2D0;
-  --gris-bg: #F3F3F3 ;
+  --gris-bg: #eeeeee ;
+  --gris-bg-clair: rgb(247, 243, 243);
   --txt: #858585;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding-top: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 p {
@@ -18,8 +30,12 @@ p {
 }
 
 /* HEADER */
-.logo, .reservation, .container {
+.logo, .reservation, .fonctionnement, .restau {
   padding: 0 1%;
+}
+
+.fonctionnement, .restau {
+  padding-bottom: 30px;
 }
 
 nav {
@@ -38,7 +54,8 @@ nav .logo__header img {
      object-fit: contain;
 }
 nav .localisation {
-  background-color: rgba(207, 207, 207, 0.8549019608);
+  border-top: solid grey;
+  background-color: var(--gris-bg);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -59,11 +76,11 @@ nav .localisation__dtl__p {
 }
 
 .reservation {
-  background-color: var(--gris-bg);
+  background-color: var(--gris-bg-clair);
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 45px;
 }
 .reservation__dtl {
   width: 70%;
@@ -81,6 +98,7 @@ nav .localisation__dtl__p {
   font-size: 18px;
   padding: 20px;
   width: 250px;
+  box-shadow: 5px 0 8px 3px rgb(196, 191, 191);
   text-align: center;
   text-decoration: none;
   color: white;
@@ -95,35 +113,37 @@ nav .localisation__dtl__p {
 .fonctionnement__list {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  justify-content: space-evenly;
 }
 .fonctionnement__btn {
   background-color: var(--gris-bg);
-  box-shadow: 10px 5px 5px rgb(196, 191, 191);
-  border-radius: 50px;
-  position: relative;
-  width: 25%;
-  text-align: center;
+  box-shadow: 10px 5px 5px rgb(230, 230, 230);
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  padding-left: 40px;
-  margin: 10px;
+  border-radius: 30px;
+  text-align: center;
+  margin: 15px 10px;
+  width: 100%;
+  max-width: 335px;
+  padding: 7px 0px;
 }
 .fonctionnement__btn i {
-  padding-right: 25px;
+  padding: 0 20px;
   color: #858585;
+  font-size: 1.5em;
 }
-.fonctionnement__btn .relative {
+.fonctionnement__btn .number {
   color: white;
-  padding: 0px 10px;
-  max-height: 30px;
-  position: absolute;
   background-color: var(--primaire);
-  bottom: 15px;
-  right: 312px;
-  border-radius: 50px;
+  padding: 10px 12px;
+  margin-left: -16px;
+  border-radius: 50%;
+  align-self: center;
+  max-height: 52px;
+  font-size: 14px;
 }
-.fonctionnement__btn .relative p {
+.fonctionnement__btn .number p {
   color: white;
   font-size: 12px;
   align-self: center;
@@ -175,18 +195,20 @@ nav .localisation__dtl__p {
      object-position: 50% 50%;
 }
 .restau__vignette__img .nouveau {
+  border-radius: 3px;
   position: absolute;
   top: 17px;
   right: 12px;
   background-color: var(--tertiaire);
   color: green;
   padding: 0px 15px;
-  height: 56px;
+}
+.restau__vignette__img .nouveau p {
+  margin: 9px 0;
 }
 .restau__vignette__dtl {
-  text-align: justify;
-  padding: 3% 2%;
-  width: 100%;
+  padding: 5% 5%;
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,9 +216,26 @@ nav .localisation__dtl__p {
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
 }
+.restau__vignette__dtl__txt {
+  text-align: justify;
+  width: 100%;
+}
+.restau__vignette__dtl__txt h4 {
+  margin: 5px 0;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.restau__vignette__dtl__txt p {
+  margin: 0;
+}
+.restau__vignette__dtl i {
+  font-size: 1.7em;
+  background-color: white;
+}
 
 /* FOOTER */
 footer {
+  color: white;
   background-color: rgb(73, 73, 73);
   display: flex;
   justify-content: flex-start;
@@ -223,10 +262,19 @@ footer .footer__dtl {
 footer .footer__dtl i {
   padding-right: 10px;
 }
+footer .footer__dtl p {
+  margin: 7px 0;
+  font-size: 20px;
+}
 
-@media screen and (max-width: 990px) {
+/* telephones */
+@media screen and (max-width: 768px) {
   body {
     flex-direction: column;
+  }
+
+  .reservation__dtl__texte {
+    max-width: 335px;
   }
 
   .restau__vignette a {
@@ -234,40 +282,12 @@ footer .footer__dtl i {
     flex-direction: column;
   }
 
+  .fonctionnement {
+    flex-direction: column;
+  }
+
   .fonctionnement__list {
     display: flex;
     flex-direction: column;
-  }
-  .fonctionnement__list .fonctionnement__btn {
-    background-color: var(--gris-bg);
-    box-shadow: 10px 5px 5px rgb(196, 191, 191);
-    border-radius: 50px;
-    position: relative;
-    width: 95%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    padding-left: 40px;
-    margin: 10px;
-  }
-  .fonctionnement__list .fonctionnement__btn i {
-    padding-right: 25px;
-    color: #858585;
-  }
-  .fonctionnement__list .fonctionnement__btn .relative {
-    color: white;
-    padding: 0px 10px;
-    max-height: 30px;
-    position: absolute;
-    background-color: var(--primaire);
-    bottom: 15px;
-    right: 322px;
-    border-radius: 50px;
-  }
-  .fonctionnement__list .fonctionnement__btn .relative p {
-    color: white;
-    font-size: 12px;
-    align-self: center;
-    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */
