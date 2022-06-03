@@ -296,7 +296,7 @@ main .container__page {
   z-index: 1;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
-  padding: 20px 30px;
+  padding: 20px 20px;
 }
 main .page2 {
   font-family: "Shrikhand", cursive;
@@ -316,7 +316,6 @@ main .menu__carte {
   border-radius: 30px;
   text-align: center;
   margin: 15px 10px;
-  width: 100%;
   max-width: 90%;
   padding: 10px 30px;
 }
@@ -334,6 +333,11 @@ main .menu__carte_txt {
   text-align: center;
   text-decoration: none;
   color: white;
+}
+
+.menu__details__list p {
+  color: #636060;
+  text-transform: uppercase;
 }
 
 /* telephones */
