@@ -1,10 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@500&family=Shrikhand&display=swap");
-* {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
 /* COULEURS UTILISES  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Shrikhand&display=swap");
 :root {
   --primaire: #9356DC;
   --secondaire: #FF79DA ;
@@ -12,6 +7,11 @@
   --gris-bg: #eeeeee ;
   --gris-bg-clair: rgb(247, 243, 243);
   --txt: #858585;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 h2 {
@@ -29,25 +29,13 @@ p {
   font-size: 18px;
 }
 
-/* HEADER */
-.logo, .reservation, .fonctionnement, .restau {
-  padding: 0 1%;
-}
-
-.fonctionnement, .restau {
-  padding-bottom: 30px;
-}
-
 nav {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 nav .logo__header {
-  max-width: 200px;
-  display: flex;
-  justify-content: center;
-  margin: auto;
+  width: 300px;
 }
 nav .logo__header img {
   width: 100%;
@@ -57,6 +45,7 @@ nav .logo__header img {
      object-fit: contain;
 }
 nav .localisation {
+  border-top: solid grey;
   background-color: var(--gris-bg);
   width: 100%;
   display: flex;
@@ -75,6 +64,15 @@ nav .localisation__dtl i {
 nav .localisation__dtl__p {
   padding: 0 30px;
   font-size: 25px;
+}
+
+/* HEADER */
+.logo, .reservation, .fonctionnement, .restau {
+  padding: 0 1%;
+}
+
+.fonctionnement, .restau {
+  padding-bottom: 30px;
 }
 
 .reservation {
@@ -264,105 +262,13 @@ footer .footer__dtl {
 footer .footer__dtl i {
   padding-right: 10px;
 }
+footer .footer__dtl a {
+  text-decoration: none;
+  color: white;
+}
 footer .footer__dtl p {
   margin: 7px 0;
   font-size: 20px;
-}
-
-.arrow__logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
-}
-
-.menu__1__img {
-  max-width: 100%;
-  max-height: 500px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: relative;
-}
-
-main {
-  display: flex;
-}
-main .container__page {
-  background-color: var(--gris-bg-clair);
-  /*    width: 100%;
-     max-height: 90%;
-     top: 59%;
-     left: 0px; */
-  z-index: 1;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-  padding: 20px 20px;
-}
-main .container__page .menu {
-  margin: 34px 0px;
-}
-main .container__page .menu__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-main .container__page .menu .page2 {
-  margin: 20px 0;
-  font-family: "Shrikhand", cursive;
-  font-size: 30px;
-}
-main .container__page .menu__dtl__title {
-  color: #636060;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-}
-main .container__page .menu__card {
-  background-color: white;
-  box-shadow: 10px 5px 5px rgb(242, 231, 231);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 20px;
-  text-align: center;
-  margin: 15px 0px;
-  padding: 15px 20px;
-}
-main .container__page .menu__card__txt {
-  flex-direction: column;
-  text-align: justify;
-  width: 100%;
-}
-main .container__page .menu__card__txt h3 {
-  font-size: 20px;
-  margin: 0;
-  padding: 0 0 5px 0;
-}
-main .container__page .menu__card__txt__dtl {
-  display: flex;
-  justify-content: space-between;
-}
-main .container__page .menu__card__txt__dtl p:first-child {
-  font-family: "Raleway", sans-serif;
-}
-main .container__page p {
-  margin: 0;
-  font-weight: bold;
-}
-main .container__page .btn {
-  border-radius: 50px;
-  background: linear-gradient(var(--secondaire), var(--primaire));
-  font-size: 18px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 5px 0 8px 3px rgb(196, 191, 191);
-  text-align: center;
-  text-decoration: none;
-  color: white;
 }
 
 /* telephones */
@@ -388,4 +294,76 @@ main .container__page .btn {
     display: flex;
     flex-direction: column;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+.arrow__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.menu__1__img {
+  max-width: 100%;
+  max-height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+main {
+  display: flex;
+}
+main .container__page {
+  background-color: var(--gris-bg);
+  /*    width: 100%;
+     max-height: 90%;
+     top: 59%;
+     left: 0px; */
+  z-index: 1;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 20px 20px;
+}
+main .page2 {
+  font-family: "Shrikhand", cursive;
+}
+main .titre-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .menu__carte {
+  background-color: white;
+  box-shadow: 10px 5px 5px rgb(230, 230, 230);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  text-align: center;
+  margin: 15px 10px;
+  max-width: 90%;
+  padding: 10px 30px;
+}
+main .menu__carte_txt {
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: 50px;
+  background: linear-gradient(var(--secondaire), var(--primaire));
+  font-size: 18px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 5px 0 8px 3px rgb(196, 191, 191);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.menu__details__list p {
+  color: #636060;
+  text-transform: uppercase;
+}/*# sourceMappingURL=main.css.map */
