@@ -13,9 +13,7 @@
     --gris-bg-clair : rgb(247, 243, 243);
     --txt : #858585;
   }
-//  h2{
-//     font-family: 'Shrikhand', cursive;
-// }
+
 h2{
     font-size: 2em;
 }
@@ -100,7 +98,7 @@ nav {
                         text-align: center;
                         /* width: 305px; */
                 }
-                /* .btn{
+                .btn{
                         border-radius: 50px;
                         background: linear-gradient(var(--secondaire),var(--primaire));
                         font-size: 18px;
@@ -110,7 +108,8 @@ nav {
                         text-align: center;
                         text-decoration: none;
                         color: white;
-                } */
+                        margin: 20px
+                }
 
             }
 }
@@ -273,7 +272,7 @@ footer{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    margin: 25px 0 0 0;
+    
     padding: 2%;
     align-items: flex-start;
 
@@ -311,6 +310,13 @@ footer{
     align-items: center;
     width: 100%;
     justify-content: space-around;
+    position: relative;
+
+    .arrow{
+        position: absolute;
+        top: 20px;
+        left: 25px;
+    }
     
 }
 .menu__1__img{
@@ -326,17 +332,25 @@ main{
     
     .container__page{
         background-color: var(--gris-bg-clair);
-     /*    width: 100%;
-        max-height: 90%;
-        top: 59%;
-        left: 0px; */
+        position: relative;
+        margin-top: -50px;
         z-index: 1;
-        border-top-right-radius: 50px;
-        border-top-left-radius: 50px;
+        border-top-right-radius: 45px;
+        border-top-left-radius: 45px;
         padding: 20px 20px;
+        height: 100%;
+        width: 100%;
+        // modification des tailles pour que le texte des menus soient pas épasé
+        h3{
+            font-size: 16px;
+        }
+        p{
+            font-size: 15px;
+            margin: 0;
+            font-weight: bold;
+        }
 
         .menu{
-            margin: 34px 0px;
 
             &__title{
                 display: flex;
@@ -349,14 +363,32 @@ main{
                 font-family: 'Shrikhand', cursive;
                 font-size: 30px;
             }
-            
-            &__dtl__title{
-                color: #636060;
-                text-transform: uppercase;
-                font-size: 18px;
-                font-family: 'Raleway', sans-serif;
-                margin: 0;
+
+            &__dtl{
+                margin-bottom: 40px;
+
+                &__title{
+                    color: #636060;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-family: 'Raleway', sans-serif;
+                    margin: 20px 0 0 0;
+                    // position relative/absolute pour avoir le after en bar 
+                    position: relative;
+                    padding-bottom: 8px;
+                    &::after{
+                        content: "";
+                        width: 3rem;
+                        height: 0.25rem;
+                        background-color: #99e2d0;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
             }
+            
+            
             &__card{
                 background-color: white;
                 box-shadow: 10px 5px 5px rgb(242 231 231);
@@ -364,7 +396,7 @@ main{
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
-                border-radius: 20px;
+                border-radius: 17px;
                 text-align: center;
                 margin: 15px 0px;
                 padding: 15px 20px;
@@ -391,23 +423,27 @@ main{
                 }
         
         }
-            //pas commenté
-        p{
-            margin: 0;
-            font-weight: bold;
-        }
 
-        .btn{
-            border-radius: 50px;
-            background: linear-gradient(var(--secondaire),var(--primaire));
-            font-size: 18px;
-            padding: 20px;
-            width: 250px;
-            box-shadow: 5px 0 8px 3px rgb(196 191 191);;
-            text-align: center;
+        .menu__btn{
+            display: flex;
             text-decoration: none;
-            color: white;
+            justify-content: center;
+            padding-bottom: 20px;
+
+            .btn{
+                border-radius: 50px;
+                background: linear-gradient(var(--secondaire),var(--primaire));
+                font-size: 18px;
+                padding: 20px;
+                width: 250px;
+                box-shadow: 5px 0 8px 3px rgb(196 191 191);;
+                text-align: center;
+                text-decoration: none;
+                color: white;
+                margin: 20px
+            }
         }
+        
     }
 }
 

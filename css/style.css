@@ -89,21 +89,22 @@ nav .localisation__dtl__p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* .btn{
-          border-radius: 50px;
-          background: linear-gradient(var(--secondaire),var(--primaire));
-          font-size: 18px;
-          padding: 20px;
-          width: 250px;
-          box-shadow: 5px 0 8px 3px rgb(196 191 191);;
-          text-align: center;
-          text-decoration: none;
-          color: white;
-  } */
 }
 .reservation__dtl__texte {
   text-align: center;
   /* width: 305px; */
+}
+.reservation__dtl .btn {
+  border-radius: 50px;
+  background: linear-gradient(var(--secondaire), var(--primaire));
+  font-size: 18px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 5px 0 8px 3px rgb(196, 191, 191);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 20px;
 }
 
 /* FONCTIONNEMENT */
@@ -242,7 +243,6 @@ footer {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin: 25px 0 0 0;
   padding: 2%;
   align-items: flex-start;
 }
@@ -275,6 +275,12 @@ footer .footer__dtl p {
   align-items: center;
   width: 100%;
   justify-content: space-around;
+  position: relative;
+}
+.arrow__logo .arrow {
+  position: absolute;
+  top: 20px;
+  left: 25px;
 }
 
 .menu__1__img {
@@ -291,17 +297,22 @@ main {
 }
 main .container__page {
   background-color: var(--gris-bg-clair);
-  /*    width: 100%;
-     max-height: 90%;
-     top: 59%;
-     left: 0px; */
+  position: relative;
+  margin-top: -50px;
   z-index: 1;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
   padding: 20px 20px;
+  height: 100%;
+  width: 100%;
 }
-main .container__page .menu {
-  margin: 34px 0px;
+main .container__page h3 {
+  font-size: 16px;
+}
+main .container__page p {
+  font-size: 15px;
+  margin: 0;
+  font-weight: bold;
 }
 main .container__page .menu__title {
   display: flex;
@@ -313,12 +324,26 @@ main .container__page .menu .page2 {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
 }
+main .container__page .menu__dtl {
+  margin-bottom: 40px;
+}
 main .container__page .menu__dtl__title {
   color: #636060;
   text-transform: uppercase;
   font-size: 18px;
   font-family: "Raleway", sans-serif;
-  margin: 0;
+  margin: 20px 0 0 0;
+  position: relative;
+  padding-bottom: 8px;
+}
+main .container__page .menu__dtl__title::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 main .container__page .menu__card {
   background-color: white;
@@ -327,7 +352,7 @@ main .container__page .menu__card {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-radius: 20px;
+  border-radius: 17px;
   text-align: center;
   margin: 15px 0px;
   padding: 15px 20px;
@@ -349,11 +374,13 @@ main .container__page .menu__card__txt__dtl {
 main .container__page .menu__card__txt__dtl p:first-child {
   font-family: "Raleway", sans-serif;
 }
-main .container__page p {
-  margin: 0;
-  font-weight: bold;
+main .container__page .menu__btn {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding-bottom: 20px;
 }
-main .container__page .btn {
+main .container__page .menu__btn .btn {
   border-radius: 50px;
   background: linear-gradient(var(--secondaire), var(--primaire));
   font-size: 18px;
@@ -363,6 +390,7 @@ main .container__page .btn {
   text-align: center;
   text-decoration: none;
   color: white;
+  margin: 20px;
 }
 
 /* telephones */

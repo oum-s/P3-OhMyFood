@@ -18,21 +18,18 @@
     <header>
         <nav>
             <div class="arrow__logo">
-                <a href="/index.html"><i class="fa-solid fa-arrow-left fa-2x"></i></a>
+                <a class="arrow" href="/index.html"><i class="fa-solid fa-arrow-left fa-2x"></i></a>
                 <div class="logo__header">
                     <img src="images/logo/ohmyfood.png" alt="logo">
                 </div>
                 </div>
         </nav>
     </header>
-
+    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="menu-bg" class="menu__1__img">
     <main>
-        <!-- METTRE LES CHECK EN DISPLAT NONE ET DS UNE DIV -->
-        <div class="menu__bg">
-            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="menu-bg" class="menu__1__img">
-        </div>
+        
         <div class="container__page">
-            <!-- img relative -->
+            
             <div class="menu">
                     <div class="menu__title">
                         <h1 class="page2">À la française</h1>
@@ -96,7 +93,7 @@
 
                     <div class="menu__dtl">
 
-                        <p class="menu__dtl__title">PLATS</p>
+                        <h2 class="menu__dtl__title">PLATS</h2>
 
                             <div class="menu__card">
 
@@ -130,7 +127,7 @@
                                     <div class="menu__card__txt">
 
                                             <h3>Pigeonneau d’Ille-et-Vilaine </h3>
-                                        <section class="menu_card_dtl">
+                                            <section class="menu__card__txt__dtl">
 
                                             <p>Sur son lit de gnocchis aux légumes</p>
                                             <p>44€</p>
@@ -144,7 +141,7 @@
 
                     <div class="menu__dtl">
 
-                        <p class="menu__dtl__title">Désserts</p>
+                        <h2 class="menu__dtl__title">Désserts</h2>
 
                             <div class="menu__card">
 
@@ -184,13 +181,16 @@
                             </div>
                     </div>
                 
-
+            
+            
             </div>
                 <!-- FIN DIV MENU -->
-
-            <a class="btn">
+            <!-- création d'une div btn pour pouvoir ajouter des margin au bouton, ce qui fonctionnait pas avant -->
+            <div class="menu__btn">
+                <a class="btn">
                     Commander
-            </a>
+                </a>
+            </div>
         </div>
         
 
