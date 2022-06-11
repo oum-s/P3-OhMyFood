@@ -1,0 +1,58 @@
+$size: 30px;
+$anim-dur: 1000ms;
+// ici / veut dire divisé
+$anim-delay: $anim-dur / 5 ;
+$anim-load : $anim-delay + $anim-dur;
+.container-load {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    animation: load 1s;
+    animation-delay: 4999ms;
+    animation-fill-mode: both;
+    z-index: 100;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.load {
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    
+    &__bar {
+        background-color: var(--primaire);
+        height: 100%;
+        width: $size;
+        /* @keyframes duration | timing-function | delay |
+   iteration-count | direction | fill-mode | play-state | name */
+        animation: bars $anim-dur 1500ms backwards infinite ease-in-out alternate;
+        @for $i from 1 through 5 {
+            // CREER LA CLASSE .load__bar--1 , 2 etc
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+             }
+        }
+    }
+}
+
+@keyframes bars {
+    from {
+        transform: scaleY(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1.0);
+        opacity: 1;
+    }
+}
+@keyframes load {
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }

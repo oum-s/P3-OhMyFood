@@ -1,0 +1,174 @@
+// DEUXIEME PAGE
+//MODIFIER LA PLACE DU LOGO
+
+.arrow__logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+
+    .arrow{
+        position: absolute;
+        top: 20px;
+        left: 25px;
+    }
+    
+}
+.menu__1__img{
+    max-width: 100%;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+// enlever les margin/padding des p et h2/h3
+main{
+    display: flex;
+    
+    .container__page{
+        background-color: var(--gris-bg-clair);
+        position: relative;
+        margin-top: -50px;
+        z-index: 1;
+        border-top-right-radius: 45px;
+        border-top-left-radius: 45px;
+        padding: 20px 20px;
+        height: 100%;
+        width: 100%;
+        // modification des tailles pour que le texte des menus soient pas épasé
+        h3{
+            font-size: 16px;
+        }
+        p{
+            font-size: 15px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .menu{
+
+            &__title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            // TITRE DE LA PAGE
+            .page2{
+                margin: 20px 0;
+                font-family: 'Shrikhand', cursive;
+                font-size: 30px;
+            }
+
+            &__dtl{
+                margin-bottom: 40px;
+
+                &__title{
+                    color: #636060;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-family: 'Raleway', sans-serif;
+                    margin: 20px 0 0 0;
+                    // position relative/absolute pour avoir le after en bar 
+                    position: relative;
+                    padding-bottom: 8px;
+                    &::after{
+                        content: "";
+                        width: 3rem;
+                        height: 0.25rem;
+                        background-color: #99e2d0;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            
+            
+            &__card{
+                background-color: white;
+                box-shadow: 10px 5px 5px rgb(242 231 231);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 17px;
+                text-align: center;
+                margin: 15px 0px;
+                padding: 15px 20px;
+                
+                    &__txt{
+                        flex-direction: column;
+                        text-align: justify;
+                        width: 100%;
+                        h3{
+                            font-size: 20px;
+                            margin: 0;
+                            padding: 0 0 5px 0;
+                        }
+                        //SECTION IN MENU CARD TXT
+                        &__dtl{
+                            display: flex;
+                            justify-content: space-between;
+                            p:first-child{
+                                font-family: 'Raleway', sans-serif;
+                            }
+                        }
+                    }
+                
+                }
+        
+        }
+
+        .menu__btn{
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            padding-bottom: 20px;
+
+            .btn{
+                border-radius: 50px;
+                background: linear-gradient(var(--secondaire),var(--primaire));
+                font-size: 18px;
+                padding: 20px;
+                width: 250px;
+                box-shadow: 5px 0 8px 3px rgb(196 191 191);;
+                text-align: center;
+                text-decoration: none;
+                color: white;
+                margin: 20px
+            }
+        }
+        
+    }
+}
+
+
+
+
+/* telephones */
+@media screen and (max-width : 768px){
+   body{
+        flex-direction: column;
+    }
+
+    .reservation__dtl__texte{
+        max-width: 335px;
+    }
+
+    .restau__vignette a{
+        width: 90%;
+        flex-direction: column;
+    }
+// TROUVER COMMENT UNIFIER LE BTN
+// fonctionne pas !!
+.fonctionnement{
+    flex-direction: column;
+}
+.fonctionnement__list{
+    display: flex;
+    flex-direction: column;
+}
+
+}
