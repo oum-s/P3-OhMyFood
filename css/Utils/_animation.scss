@@ -1,7 +1,7 @@
 $size: 30px;
 $anim-dur: 1000ms;
 // ici / veut dire divisé
-$anim-delay: $anim-dur / 5 ;
+$anim-delay: $anim-dur / 3 ;
 $anim-load : $anim-delay + $anim-dur;
 .container-load {
     position: fixed;
@@ -30,11 +30,11 @@ $anim-load : $anim-delay + $anim-dur;
         width: $size;
         /* @keyframes duration | timing-function | delay |
    iteration-count | direction | fill-mode | play-state | name */
-        animation: bars $anim-dur 1500ms backwards infinite ease-in-out alternate;
-        @for $i from 1 through 5 {
+        animation: bars $anim-dur .3s backwards infinite ease-in-out alternate;
+        @for $i from 1 through 3 {
             // CREER LA CLASSE .load__bar--1 , 2 etc
             &--#{$i} {
-                animation-delay: $anim-delay * $i;
+                animation-delay: 1s * $i;
              }
         }
     }
@@ -56,3 +56,40 @@ $anim-load : $anim-delay + $anim-dur;
       z-index: -1;
     }
   }
+
+
+// apparition progressive des plats
+
+$anim-dur-card: 1000ms;
+$anim-delay-card: $anim-dur-card / 3 ;
+$anim-load-card : $anim-delay-card + $anim-dur-card; 
+.menu__card {
+ animation: fading .3s;
+ animation-fill-mode: both;
+ 
+ @for $i from 1 through 3 {
+    // CREER LA CLASSE .load__bar--1 , 2 etc
+    &--#{$i} {
+        animation-delay: 200ms * $i;
+        
+     }
+}
+}
+@keyframes fading {
+    0% {
+        /*  transform: scaleY(0.0); */
+        opacity: 0;
+    }
+    25% {
+       /*  transform: scaleY(0.25); */
+        opacity: 0.25;
+    }
+    50% {
+        /* transform: scaleY(0.5); */
+        opacity: 0.5;
+    }
+    100% {
+       /*  transform: scaleY(1.0); */
+        opacity: 1;
+    }
+}

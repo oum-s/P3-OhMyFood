@@ -97,6 +97,7 @@ main{
                 text-align: center;
                 margin: 15px 0px;
                 padding: 15px 20px;
+                opacity: 0;
                 
                     &__txt{
                         flex-direction: column;
@@ -137,7 +138,10 @@ main{
                 text-align: center;
                 text-decoration: none;
                 color: white;
-                margin: 20px
+                margin: 20px;
+                &:hover{
+                    background: linear-gradient( lighten(#FF79DA, 5) 0%, lighten(#9356DC, 10) 100%);
+                 }
             }
         }
         

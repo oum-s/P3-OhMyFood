@@ -70,7 +70,7 @@
                          text-align: center;
                          /* width: 305px; */
                  }
-                 .btn{
+                 .btn{  
                          border-radius: 50px;
                          background: linear-gradient(var(--secondaire),var(--primaire));
                          font-size: 18px;
@@ -80,7 +80,11 @@
                          text-align: center;
                          text-decoration: none;
                          color: white;
-                         margin: 20px
+                         margin: 20px;
+                         &:hover{
+                            background: linear-gradient( lighten(#FF79DA, 5) 0%, lighten(#9356DC, 10) 100%);
+
+                         }
                  }
  
              }
@@ -109,7 +113,6 @@
              width: 100%;
              max-width: 335px;
              padding: 7px 0px;
-             
              i{
                  padding: 0 20px;
                  color: #858585;
