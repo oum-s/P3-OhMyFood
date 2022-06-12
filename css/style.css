@@ -106,6 +106,9 @@ nav .localisation__dtl__p {
   color: white;
   margin: 20px;
 }
+.reservation__dtl .btn:hover {
+  background: linear-gradient(#ff93e1 0%, #ae80e5 100%);
+}
 
 /* FONCTIONNEMENT */
 .fonctionnement {
@@ -357,6 +360,7 @@ main .container__page .menu__card {
   text-align: center;
   margin: 15px 0px;
   padding: 15px 20px;
+  opacity: 0;
 }
 main .container__page .menu__card__txt {
   flex-direction: column;
@@ -392,6 +396,9 @@ main .container__page .menu__btn .btn {
   text-decoration: none;
   color: white;
   margin: 20px;
+}
+main .container__page .menu__btn .btn:hover {
+  background: linear-gradient(#ff93e1 0%, #ae80e5 100%);
 }
 
 /* telephones */
@@ -449,28 +456,20 @@ main .container__page .menu__btn .btn {
   width: 30px;
   /* @keyframes duration | timing-function | delay |
   iteration-count | direction | fill-mode | play-state | name */
-  -webkit-animation: bars 1000ms 1500ms backwards infinite ease-in-out alternate;
-          animation: bars 1000ms 1500ms backwards infinite ease-in-out alternate;
+  -webkit-animation: bars 1000ms 0.3s backwards infinite ease-in-out alternate;
+          animation: bars 1000ms 0.3s backwards infinite ease-in-out alternate;
 }
 .load__bar--1 {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .load__bar--2 {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 .load__bar--3 {
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
-}
-.load__bar--4 {
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
-}
-.load__bar--5 {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 @-webkit-keyframes bars {
@@ -504,5 +503,61 @@ main .container__page .menu__btn .btn {
   100% {
     opacity: 0;
     z-index: -1;
+  }
+}
+.menu__card {
+  -webkit-animation: fading 0.3s;
+          animation: fading 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__card--1 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.menu__card--2 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.menu__card--3 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+@-webkit-keyframes fading {
+  0% {
+    /*  transform: scaleY(0.0); */
+    opacity: 0;
+  }
+  25% {
+    /*  transform: scaleY(0.25); */
+    opacity: 0.25;
+  }
+  50% {
+    /* transform: scaleY(0.5); */
+    opacity: 0.5;
+  }
+  100% {
+    /*  transform: scaleY(1.0); */
+    opacity: 1;
+  }
+}
+
+@keyframes fading {
+  0% {
+    /*  transform: scaleY(0.0); */
+    opacity: 0;
+  }
+  25% {
+    /*  transform: scaleY(0.25); */
+    opacity: 0.25;
+  }
+  50% {
+    /* transform: scaleY(0.5); */
+    opacity: 0.5;
+  }
+  100% {
+    /*  transform: scaleY(1.0); */
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
