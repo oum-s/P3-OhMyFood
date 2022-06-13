@@ -596,5 +596,10 @@ main .container__page .menu__btn .btn:hover {
       */
   margin-right: -2px;
   opacity: 1;
-  transition: all 2s;
+  transition: all 1s;
+  /*  transition-duration: 1s; */
+}
+.menu__card:hover .menu__card__check .fa-check {
+  transform: rotate(-360deg);
+  transition: transform 1.3s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

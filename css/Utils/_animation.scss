@@ -98,17 +98,23 @@ $anim-load : $anim-delay + $anim-dur;
              */
              margin-right: -2px;
              opacity: 1;
-             transition: all 2s;
+             transition: all 1s;
+            /*  transition-duration: 1s; */
+ .fa-check{
+   
+                transform: rotate(-360deg) ;
+                transition : transform 1.3s ease-in-out;
+             }
+            
         }
+
     }
 }
-// @keyframes check{
+// @keyframes flip{
 //     from{
-//         opacity: 0;
-//         margin-right: -78px;
+//         rotate: 0deg;
 //     }
 //     to{
-//         opacity: 1;
-//         margin-right: -2px ;
+//         rotate: 360deg;
 //     }
 // }
