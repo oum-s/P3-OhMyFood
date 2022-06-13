@@ -318,6 +318,16 @@ main .container__page p {
   margin: 0;
   font-weight: bold;
 }
+main .container__page .menu {
+  /* &__check{
+          display: flex;
+          width: 40px;
+          height: 90px;
+          justify-content: center;
+          align-items: center;
+          background-color: #99e2d0;
+      } */
+}
 main .container__page .menu__title {
   display: flex;
   align-items: center;
@@ -359,13 +369,15 @@ main .container__page .menu__card {
   border-radius: 17px;
   text-align: center;
   margin: 15px 0px;
-  padding: 15px 20px;
+  cursor: pointer;
   opacity: 0;
+  overflow: hidden;
 }
 main .container__page .menu__card__txt {
   flex-direction: column;
   text-align: justify;
   width: 100%;
+  padding: 15px 20px;
 }
 main .container__page .menu__card__txt h3 {
   font-size: 20px;
@@ -378,6 +390,24 @@ main .container__page .menu__card__txt__dtl {
 }
 main .container__page .menu__card__txt__dtl p:first-child {
   font-family: "Raleway", sans-serif;
+}
+main .container__page .menu__card__check {
+  display: flex;
+  max-width: 100%;
+  padding: 20px;
+  margin: -1px -78px -1px 0px;
+  border-bottom-right-radius: 17px;
+  border-top-right-radius: 17px;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  opacity: 0;
+}
+main .container__page .menu__card__check .fa-check {
+  border-radius: 100px;
+  background-color: white;
+  padding: 10px;
+  color: #99e2d0;
 }
 main .container__page .menu__btn {
   display: flex;
@@ -506,22 +536,22 @@ main .container__page .menu__btn .btn:hover {
   }
 }
 .menu__card {
-  -webkit-animation: fading 0.3s;
-          animation: fading 0.3s;
+  -webkit-animation: fading 0.5s;
+          animation: fading 0.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 .menu__card--1 {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
 }
 .menu__card--2 {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 .menu__card--3 {
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
 }
 
 @-webkit-keyframes fading {
@@ -560,4 +590,11 @@ main .container__page .menu__btn .btn:hover {
     /*  transform: scaleY(1.0); */
     opacity: 1;
   }
+}
+.menu__card:hover .menu__card__check {
+  /*    animation: check 1s ease-in-out both  ;
+      */
+  margin-right: -2px;
+  opacity: 1;
+  transition: all 2s;
 }/*# sourceMappingURL=style.css.map */

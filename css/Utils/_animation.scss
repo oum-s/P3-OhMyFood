@@ -60,17 +60,14 @@ $anim-load : $anim-delay + $anim-dur;
 
 // apparition progressive des plats
 
-$anim-dur-card: 1000ms;
-$anim-delay-card: $anim-dur-card / 3 ;
-$anim-load-card : $anim-delay-card + $anim-dur-card; 
 .menu__card {
- animation: fading .3s;
+ animation: fading .5s;
  animation-fill-mode: both;
  
  @for $i from 1 through 3 {
     // CREER LA CLASSE .load__bar--1 , 2 etc
     &--#{$i} {
-        animation-delay: 200ms * $i;
+        animation-delay: 250ms * $i;
         
      }
 }
@@ -93,3 +90,25 @@ $anim-load-card : $anim-delay-card + $anim-dur-card;
         opacity: 1;
     }
 }
+// check
+.menu__card{
+    &:hover{
+        .menu__card__check{
+         /*    animation: check 1s ease-in-out both  ;
+             */
+             margin-right: -2px;
+             opacity: 1;
+             transition: all 2s;
+        }
+    }
+}
+// @keyframes check{
+//     from{
+//         opacity: 0;
+//         margin-right: -78px;
+//     }
+//     to{
+//         opacity: 1;
+//         margin-right: -2px ;
+//     }
+// }
