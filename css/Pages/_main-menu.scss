@@ -81,9 +81,10 @@
                          text-decoration: none;
                          color: white;
                          margin: 20px;
+                         cursor: pointer;
                          &:hover{
                             background: linear-gradient( lighten(#FF79DA, 5) 0%, lighten(#9356DC, 10) 100%);
-
+                            box-shadow: 5px 0 12px 7px rgb(196 191 191);
                          }
                  }
  
