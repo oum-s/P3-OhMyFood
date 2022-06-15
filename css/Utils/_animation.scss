@@ -63,11 +63,12 @@ $anim-load : $anim-delay + $anim-dur;
 .menu__card {
  animation: fading .5s;
  animation-fill-mode: both;
+ animation-delay: 500ms;
  
  @for $i from 1 through 3 {
     // CREER LA CLASSE .load__bar--1 , 2 etc
     &--#{$i} {
-        animation-delay: 250ms * $i;
+        animation-delay: 200ms * $i;
         
      }
 }
@@ -77,14 +78,14 @@ $anim-load : $anim-delay + $anim-dur;
         /*  transform: scaleY(0.0); */
         opacity: 0;
     }
-    25% {
-       /*  transform: scaleY(0.25); */
-        opacity: 0.25;
-    }
-    50% {
-        /* transform: scaleY(0.5); */
-        opacity: 0.5;
-    }
+    // 25% {
+    //    /*  transform: scaleY(0.25); */
+    //     opacity: 0.25;
+    // }
+    // 50% {
+    //     /* transform: scaleY(0.5); */
+    //     opacity: 0.5;
+    // }
     100% {
        /*  transform: scaleY(1.0); */
         opacity: 1;
@@ -94,16 +95,14 @@ $anim-load : $anim-delay + $anim-dur;
 .menu__card{
     &:hover{
         .menu__card__check{
-         /*    animation: check 1s ease-in-out both  ;
-             */
+            // pour faire apparaitre la div check
              margin-right: -2px;
-             opacity: 1;
-             transition: all 1s;
-            /*  transition-duration: 1s; */
  .fa-check{
-   
-                transform: rotate(-360deg) ;
-                transition : transform 1.3s ease-in-out;
+
+                transform: rotate(360deg) ;
+                // car sinon l'icone commencerait à tourner bien avant d'apparaitre
+                transition-delay: 200ms;
+                transition : transform 500ms ease-in-out ;
              }
             
         }

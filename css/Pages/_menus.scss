@@ -129,7 +129,9 @@ main{
                         justify-content: center;
                         align-items: center;
                         background-color: #99e2d0;
-                        opacity: 0;
+                        // redondance pour pouvoir avoir une div qui disparait lentement
+                        transition : 350ms ease-in-out;
+                        opacity: 1;
                         .fa-check{
                             border-radius: 100px;
                             background-color: white;
