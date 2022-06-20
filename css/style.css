@@ -262,7 +262,7 @@ nav .localisation__dtl__p {
 .btn__like .fas {
   opacity: 0;
   color: transparent;
-  background: linear-gradient(red, blue);
+  background: linear-gradient(var(--secondaire), var(--primaire));
   background-clip: text;
   -webkit-background-clip: text;
   transition: all 300ms ease-in-out;
