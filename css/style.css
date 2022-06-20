@@ -223,6 +223,7 @@ nav .localisation__dtl__p {
   background-color: white;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
+  position: relative;
 }
 .restau__vignette__dtl__txt {
   text-align: justify;
@@ -236,10 +237,35 @@ nav .localisation__dtl__p {
 .restau__vignette__dtl__txt p {
   margin: 0;
 }
-.restau__vignette__dtl .fa-heart {
-  font-size: 1.7em;
-  font-weight: 100;
-  background: linear-gradient(var(--secondaire), var(--primaire));
+
+.btn__like {
+  height: 35px;
+  width: 40px;
+  /*    background-color: transparent;
+     border: transparent 0px solid; */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* cursor: pointer; */
+  position: relative;
+  /* background-color: black; */
+}
+.btn__like:hover .fas {
+  opacity: 1;
+}
+.btn__like .fa-heart {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.btn__like .fas {
+  opacity: 0;
+  color: transparent;
+  background: linear-gradient(red, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 300ms ease-in-out;
 }
 
 /* FOOTER */
@@ -287,6 +313,7 @@ footer .footer__dtl p {
   position: absolute;
   top: 20px;
   left: 25px;
+  color: black;
 }
 
 .menu__1__img {
@@ -365,39 +392,53 @@ main .container__page .menu__card {
   background-color: white;
   box-shadow: 10px 5px 5px rgb(242, 231, 231);
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   border-radius: 17px;
-  text-align: center;
+  /* text-align: center; */
   margin: 15px 0px;
   cursor: pointer;
   opacity: 0;
   overflow: hidden;
+  background-color: #FF79DA;
+}
+main .container__page .menu__card .essai {
+  display: flex;
+  width: 100%;
 }
 main .container__page .menu__card__txt {
+  flex: 1;
   flex-direction: column;
   text-align: justify;
   width: 100%;
   padding: 15px 20px;
+  overflow: hidden;
 }
 main .container__page .menu__card__txt h3 {
   font-size: 20px;
   margin: 0;
-  padding: 0 0 5px 0;
+  padding: 0 0 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-main .container__page .menu__card__txt__dtl {
-  display: flex;
-  justify-content: space-between;
-}
-main .container__page .menu__card__txt__dtl p:first-child {
+main .container__page .menu__card__txt p {
   font-family: "Raleway", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main .container__page .menu__card__price {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
 }
 main .container__page .menu__card__check {
   display: flex;
-  max-width: 100%;
-  padding: 20px;
-  margin: -1px -78px -1px 0px;
+  width: 20px;
+  padding: 10px 35px;
+  margin: -1px -80px -1px 0px;
   border-bottom-right-radius: 17px;
   border-top-right-radius: 17px;
   justify-content: center;
@@ -560,6 +601,22 @@ main .container__page .menu__btn .btn:hover {
   -webkit-animation-delay: 600ms;
           animation-delay: 600ms;
 }
+.menu__card--1 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.menu__card--2 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.menu__card--3 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+.menu__card--4 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
 
 @-webkit-keyframes fading {
   0% {
@@ -581,6 +638,9 @@ main .container__page .menu__btn .btn:hover {
     /*  transform: scaleY(1.0); */
     opacity: 1;
   }
+}
+.menu__card:hover__txt {
+  text-overflow: ellipsis;
 }
 .menu__card:hover .menu__card__check {
   margin-right: -2px;
