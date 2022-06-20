@@ -72,6 +72,13 @@ $anim-load : $anim-delay + $anim-dur;
         
      }
 }
+@for $i from 1 through 4 {
+    // CREER LA CLASSE .load__bar--1 , 2 etc
+    &--#{$i} {
+        animation-delay: 200ms * $i;
+        
+     }
+}
 }
 @keyframes fading {
     0% {
@@ -94,6 +101,10 @@ $anim-load : $anim-delay + $anim-dur;
 // check
 .menu__card{
     &:hover{
+        &__txt{
+        text-overflow: ellipsis;
+        }
+        
         .menu__card__check{
             // pour faire apparaitre la div check
              margin-right: -2px;
