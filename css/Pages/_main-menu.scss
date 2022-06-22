@@ -70,23 +70,6 @@
                          text-align: center;
                          /* width: 305px; */
                  }
-                 .btn{  
-                         border-radius: 50px;
-                         background: linear-gradient(var(--secondaire),var(--primaire));
-                         font-size: 18px;
-                         padding: 20px;
-                         width: 250px;
-                         box-shadow: 5px 0 8px 3px rgb(196 191 191);;
-                         text-align: center;
-                         text-decoration: none;
-                         color: white;
-                         margin: 20px;
-                         cursor: pointer;
-                         &:hover{
-                            background: linear-gradient( lighten(#FF79DA, 5) 0%, lighten(#9356DC, 10) 100%);
-                            box-shadow: 5px 0 12px 7px rgb(196 191 191);
-                         }
-                 }
  
              }
  }
@@ -104,7 +87,7 @@
      }
      &__btn{
              background-color: var(--gris-bg);
-             box-shadow: 10px 5px 5px rgb(230, 230, 230);
+             @include box-shadow-btn;
              display: flex;
              justify-content: flex-start;
              align-items: center;
@@ -172,7 +155,7 @@
                              display: flex;
                              flex-direction: column;
                              margin: 20px 0;
-                             box-shadow: 5px 10px 5px rgb(224, 223, 223);
+                             @include box-shadow-card;
                              
                          }
                              &__img{
@@ -247,7 +230,7 @@
         display:flex;
         align-items:center;
         justify-content:center;
-        /* cursor: pointer; */
+        cursor: pointer;
         position: relative;
         /* background-color: black; */
         &:hover .fas{

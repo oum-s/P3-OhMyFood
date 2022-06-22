@@ -9,8 +9,8 @@
   --primaire: #9356DC;
   --secondaire: #FF79DA ;
   --tertiaire: #99E2D0;
-  --gris-bg: #eeeeee ;
-  --gris-bg-clair: rgb(247, 243, 243);
+  --gris-bg: #F6F6F6;
+  --gris-bg-clair: #FFFFFF;
   --txt: #858585;
 }
 
@@ -27,6 +27,24 @@ h3 {
 
 p {
   font-size: 18px;
+}
+
+.btn {
+  background: linear-gradient(var(--secondaire), var(--primaire));
+  font-size: 18px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 10px 5px 5px rgb(230, 230, 230);
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(#ff93e1 0%, #ae80e5 100%);
+  box-shadow: 5px 0 12px 7px rgb(196, 191, 191);
 }
 
 /* HEADER */
@@ -93,23 +111,6 @@ nav .localisation__dtl__p {
 .reservation__dtl__texte {
   text-align: center;
   /* width: 305px; */
-}
-.reservation__dtl .btn {
-  border-radius: 50px;
-  background: linear-gradient(var(--secondaire), var(--primaire));
-  font-size: 18px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 5px 0 8px 3px rgb(196, 191, 191);
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  margin: 20px;
-  cursor: pointer;
-}
-.reservation__dtl .btn:hover {
-  background: linear-gradient(#ff93e1 0%, #ae80e5 100%);
-  box-shadow: 5px 0 12px 7px rgb(196, 191, 191);
 }
 
 /* FONCTIONNEMENT */
@@ -247,7 +248,7 @@ nav .localisation__dtl__p {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* cursor: pointer; */
+  cursor: pointer;
   position: relative;
   /* background-color: black; */
 }
@@ -316,22 +317,22 @@ footer .footer__dtl p {
   color: black;
 }
 
-.menu__1__img {
+.menu__bg__img {
   max-width: 100%;
   max-height: 500px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  position: relative;
+  /* position: relative; */
 }
 
 main {
   display: flex;
 }
 main .container__page {
-  background-color: var(--gris-bg-clair);
-  position: relative;
+  background-color: var(--gris-bg);
   margin-top: -50px;
+  position: relative;
   z-index: 1;
   border-top-right-radius: 45px;
   border-top-left-radius: 45px;
@@ -362,10 +363,14 @@ main .container__page .menu__title {
   align-items: center;
   justify-content: space-between;
 }
-main .container__page .menu .page2 {
+main .container__page .menu__title--h1 {
   margin: 20px 0;
   font-family: "Shrikhand", cursive;
   font-size: 30px;
+}
+main .container__page .menu__title .menu__like {
+  height: 50px;
+  margin: 0 20px;
 }
 main .container__page .menu__dtl {
   margin-bottom: 40px;
@@ -381,8 +386,8 @@ main .container__page .menu__dtl__title {
 }
 main .container__page .menu__dtl__title::after {
   content: "";
-  width: 3rem;
-  height: 0.25rem;
+  width: 50px;
+  height: 5px;
   background-color: #99e2d0;
   position: absolute;
   left: 0;
@@ -392,16 +397,12 @@ main .container__page .menu__card {
   background-color: white;
   box-shadow: 10px 5px 5px rgb(242, 231, 231);
   display: flex;
-  /* flex-direction: row;
-  align-items: center;
-  justify-content: space-between; */
   border-radius: 17px;
-  /* text-align: center; */
   margin: 15px 0px;
   cursor: pointer;
   opacity: 0;
   overflow: hidden;
-  background-color: #FF79DA;
+  box-shadow: 5px 10px 5px rgb(224, 223, 223);
 }
 main .container__page .menu__card .essai {
   display: flex;
@@ -432,7 +433,8 @@ main .container__page .menu__card__txt p {
 main .container__page .menu__card__price {
   padding: 15px 20px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  margin-right: 15px;
 }
 main .container__page .menu__card__check {
   display: flex;
@@ -458,23 +460,6 @@ main .container__page .menu__btn {
   text-decoration: none;
   justify-content: center;
   padding-bottom: 20px;
-}
-main .container__page .menu__btn .btn {
-  border-radius: 50px;
-  background: linear-gradient(var(--secondaire), var(--primaire));
-  font-size: 18px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 5px 0 8px 3px rgb(196, 191, 191);
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  margin: 20px;
-  cursor: pointer;
-}
-main .container__page .menu__btn .btn:hover {
-  background: linear-gradient(#ff93e1 0%, #ae80e5 100%);
-  box-shadow: 5px 0 12px 7px rgb(196, 191, 191);
 }
 
 /* telephones */

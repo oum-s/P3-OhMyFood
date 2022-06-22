@@ -9,12 +9,18 @@
     --primaire : #9356DC;
     --secondaire : #FF79DA ;
       --tertiaire : #99E2D0;
-    --gris-bg : #eeeeee ;
-    --gris-bg-clair : rgb(247, 243, 243);
+    --gris-bg : #F6F6F6;
+    --gris-bg-clair : #FFFFFF;
     --txt : #858585;
 
 
 
+  }
+  @mixin box-shadow-card{
+    box-shadow: 5px 10px 5px rgb(224, 223, 223);
+  }
+  @mixin box-shadow-btn {
+    box-shadow: 10px 5px 5px rgb(230, 230, 230);
   }
   h2{
     font-size: 2em;
@@ -27,4 +33,21 @@ h3{
 }
 p{
     font-size: 18px;
+}
+.btn{  
+  background: linear-gradient(var(--secondaire),var(--primaire));
+  font-size: 18px;
+  padding: 20px;
+  width: 250px;
+  @include box-shadow-btn;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  cursor: pointer;
+  &:hover{
+     background: linear-gradient( lighten(#FF79DA, 5) 0%, lighten(#9356DC, 10) 100%);
+     box-shadow: 5px 0 12px 7px rgb(196 191 191);
+  }
 }

@@ -14,28 +14,37 @@
 <link rel="stylesheet" href="css/normalize.css">
     <title>La palette du goût</title>
 </head>
+
+
+
 <body>
     <header>
         <nav>
             <div class="arrow__logo">
+
                 <a class="arrow" href="/index.html"><i class="fa-solid fa-arrow-left fa-2x"></i></a>
+
                 <div class="logo__header">
                     <img src="images/logo/ohmyfood.png" alt="logo">
                 </div>
-                </div>
+
+            </div>
+
         </nav>
     </header>
-    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="menu-bg" class="menu__1__img">
+
+    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="menu-bg" class="menu__bg__img">
+
     <main>
         
         <div class="container__page">
             
             <div class="menu">
                     <div class="menu__title">
-                        <h1 class="page2">La palette du goût</h1>
-                        <div class="btn__like">
-                            <i class="far fa-heart fa-2x"></i>
-                            <i class="fas fa-heart fa-2x"></i>
+                        <h1 class="menu__title--h1">La palette du goût</h1>
+                        <div class="btn__like menu__like">
+                            <i class="far fa-heart fa-3x"></i>
+                            <i class="fas fa-heart fa-3x"></i>
                         </div>
                     </div>
 
@@ -45,24 +54,22 @@
                     
                         <h2 class="menu__dtl__title">Entrées</h2>
 
-                        <div class="menu__card menu__card--1 ">
-                            <div class="essai">
-                                <div class="menu__card__txt">
 
-                                    <h3>Fricassée d'escargot
-                                    </h3>
-                                    <p>Au piment d'Espelette </p>
-    
-                                </div>
-                                <section class="menu__card__price">
-                                    <p>25€</p>
-                                </section>
-                            </div>
-
-                            <div class="menu__card__check ">
+                        <div class="menu__card menu__card--1">
+                            <section class="menu__card__txt">
+                                <h3>Fricassée d'escargot
+                                </h3>
+                                <p>
+                                    Au piment d'Espelette
+                                </p>
+                            </section>
+                            <section class="menu__card__price">
+                                <p>25€</p>
+                             </section>
+                            <section class="menu__card__check">
                                     <i class="fa-solid fa-check"></i>
-                                  
-                            </div>
+                            </section>
+
                         </div>
 
                         <div class="menu__card menu__card--2">
@@ -71,35 +78,42 @@
                                 <h3>Foie gras de canard mi-cuit
                                 </h3>
 
-                                <section class="menu__card__txt__dtl">
+                                <!-- <section class="menu__card__txt__dtl"> -->
                                         <p>
                                             Et ses copeaux de truffe noire
 
                                         </p>
-                                        <p>35€</p>
-                                </section>
+                                       
+                             <!--    </section> -->
                             </div>
-
+                                        <section class="menu__card__price">
+                                            <p>35€</p>
+                                        </section>
                             <div class="menu__card__check">
-                                <i class="fa-solid fa-check"></i>
+                                <div class="menu__card_check__confirm">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                
                             </div>
 
                         </div>
 
                         <div class="menu__card menu__card--3">
-                            <div class="menu__card__txt">
+
+                            <section class="menu__card__txt">
 
                                 <h3>Oeuf au plat
                                 </h3>
 
-                                <section class="menu__card__txt__dtl">
-                                    <p>Assaisonné à la truffe sur lit de caviar
-                                    </p>
-                                    <p>20€</p>
-                                    <!-- <i class="fa-light fa-circle-check"></i> -->
-                                </section>
+                                <p>Assaisonné à la truffe sur lit de caviar
+                                </p>
 
-                            </div>
+                            </section>
+
+                            <section class="menu__card__price">
+                                <p>20€</p>
+                             </section>
+
                             <div class="menu__card__check">
                                 <i class="fa-solid fa-check"></i>
                             </div>
@@ -113,63 +127,57 @@
 
                             <div class="menu__card menu__card--1">
 
-                                    <div class="menu__card__txt">
+                                    <section class="menu__card__txt">
 
                                         <h3>Filet de boeuf aux herbes
                                         </h3>
+                                        <p> Accompagné de sa ribambelle de légumes
+                                        </p>
+                                    </section>
 
-                                        <section class="menu__card__txt__dtl">
-                                            <p> Accompagné de sa ribambelle de légumes
-                                            </p>
-                                            <p>40€</p>
-                                        </section>
+                                    <section class="menu__card__price">
+                                       <p>40€</p>
+                                    </section>
 
-                                    </div>
-
-                                    <div class="menu__card__check">
+                                    <section class="menu__card__check">
                                         <i class="fa-solid fa-check"></i>
-                                    </div>
+                                    </section>
                             </div>
 
                             <div class="menu__card menu__card--2">
 
-                                    <div class="menu__card__txt">
+                                    <section class="menu__card__txt">
 
                                         <h3>Parmentier de queue de boeuf
                                         </h3>
-
-                                        <section class="menu__card__txt__dtl">
-                                            <p>À la truffe noire sur sa purée de panais
-                                            </p>
+                                        <p>À la truffe noire sur sa purée de panais
+                                        </p>
+                                    </section>
+                                    <section class="menu__card__price">
                                             <p>35€</p>
-                                        </section>
+                                    </section>
 
-                                    </div>
-
-                                    <div class="menu__card__check">
+                                    <section class="menu__card__check">
                                         <i class="fa-solid fa-check"></i>
-                                    </div>
+                                    </section>
                             </div>
 
                             <div class="menu__card menu__card--3">
 
-                                    <div class="menu__card__txt">
+                                    <section class="menu__card__txt">
 
-                                            <h3>Filet de turbot</h3>
+                                        <h3>Filet de turbot</h3>
+                                        <p>Aux agrumes
+                                        </p>
+                                    </section>
 
-                                            <section class="menu__card__txt__dtl">
-
-                                            <p>Aux agrumes
-                                            </p>
-                                            <p>44€</p>
-
-                                            </section>
-                                                
-                                    </div>
-
-                                    <div class="menu__card__check">
+                                    <section class="menu__card__price">
+                                       <p>44€</p>
+                                    </section>
+                                    
+                                    <section class="menu__card__check">
                                         <i class="fa-solid fa-check"></i>
-                                    </div>
+                                    </section>
                             </div>
                     </div>
 
@@ -179,62 +187,58 @@
 
                             <div class="menu__card menu__card--1">
 
-                                    <div class="menu__card__txt">
+                                    <section class="menu__card__txt">
 
                                         <h3>Paris-Brest
                                         </h3>
-
-                                        <section class="menu__card__txt__dtl">
-                                            <p>Revisité
-                                            </p>
-                                            <p>18€</p>
-                                        </section>
-
-                                    </div>
-
-                                    <div class="menu__card__check">
+                                        <p>Revisité
+                                        </p>
+                                    </section>
+                                    
+                                    <section class="menu__card__price">
+                                        <p>18€</p>
+                                    </section>
+                                    
+                                    <section class="menu__card__check">
                                         <i class="fa-solid fa-check"></i>
-                                    </div>
+                                    </section>
                             </div>
 
                             <div class="menu__card menu__card--2">
-                                <div class="menu__card__txt">
+                                <section class="menu__card__txt">
 
                                      <h3>Macaron au chocolat d'exception 
-                                    </h3>
+                                     </h3>
+                                     <p>Et glace à la vanille de Madagascar
+                                     </p>
+                                </section>
+                                
+                                <section class="menu__card__price">
+                                     <p>22€</p>
+                                </section>
 
-                                        <section class="menu__card__txt__dtl">
-                                            <p>Et glace à la vanille de Madagascar
-                                            </p>
-                                            <p>22€</p>
-                                        </section>
-
-                                </div>
-
-                                <div class="menu__card__check">
+                                <section class="menu__card__check">
                                     <i class="fa-solid fa-check"></i>
-                                </div>
+                                </section>
                             </div>
 
                             <div class="menu__card menu__card--3">
-                                <div class="menu__card__txt">
+                                <section class="menu__card__txt">
 
-                                    <h3> Mousse au chocolat 
-
+                                    <h3> Mousse au chocolat
                                     </h3>
+                                    <p>
+                                        Au piment d'Espelette et à la truffe noire
+                                    </p>
+                                </section>
+                                
+                                <section class="menu__card__price">
+                                    <p>23€</p>
+                                </section>
 
-                                        <section class="menu__card__txt__dtl">
-                                            <p>
-                                                Au piment d'Espelette et à la truffe noire
-                                            </p>
-                                            <p>23€</p>
-                                        </section>
-
-                                </div>
-
-                                <div class="menu__card__check">
+                                <section class="menu__card__check">
                                     <i class="fa-solid fa-check"></i>
-                                </div>
+                                </section>
                                 
                             </div>
                     </div>
@@ -243,7 +247,7 @@
             
             </div>
                 <!-- FIN DIV MENU -->
-            <!-- création d'une div btn pour pouvoir ajouter des margin au bouton, ce qui fonctionnait pas avant -->
+            
             <div class="menu__btn">
                 <a class="btn">
                     Commander
