@@ -1,6 +1,4 @@
 // DEUXIEME PAGE
-//MODIFIER LA PLACE DU LOGO
-
 .arrow__logo{
     display: flex;
     flex-direction: row;
@@ -17,22 +15,26 @@
     }
     
 }
-.menu__1__img{
+// Image de fond
+.menu__bg__img{
     max-width: 100%;
     max-height: 500px;
     width: 100%;
     object-fit: cover;
-    position: relative;
+    /* position: relative; */
 }
-// enlever les margin/padding des p et h2/h3
+// MAIN
 main{
+
     display: flex;
     
     .container__page{
-        background-color: var(--gris-bg-clair);
-        position: relative;
+        background-color: var(--gris-bg);
         margin-top: -50px;
+        // prmet d'avoir la div au dessus de l'image-bg
+        position: relative;
         z-index: 1;
+
         border-top-right-radius: 45px;
         border-top-left-radius: 45px;
         padding: 20px 20px;
@@ -54,13 +56,19 @@ main{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                 // TITRE DE LA PAGE
+                        &--h1{
+                                margin: 20px 0;
+                                font-family: 'Shrikhand', cursive;
+                                font-size: 30px;
+                            }
+                        .menu__like{
+                            height: 50px;
+                            margin: 0 20px;
+
+                        }
             }
-            // TITRE DE LA PAGE
-            .page2{
-                margin: 20px 0;
-                font-family: 'Shrikhand', cursive;
-                font-size: 30px;
-            }
+           
 
             &__dtl{
                 margin-bottom: 40px;
@@ -76,8 +84,8 @@ main{
                     padding-bottom: 8px;
                     &::after{
                         content: "";
-                        width: 3rem;
-                        height: 0.25rem;
+                        width: 50px;
+                        height: 5px;
                         background-color: #99e2d0;
                         position: absolute;
                         left: 0;
@@ -91,16 +99,13 @@ main{
                 background-color: white;
                 box-shadow: 10px 5px 5px rgb(242 231 231);
                 display: flex;
-                /* flex-direction: row;
-                align-items: center;
-                justify-content: space-between; */
                 border-radius: 17px;
-                /* text-align: center; */
                 margin: 15px 0px;
                 cursor: pointer;
                 opacity: 0;
                 overflow: hidden;
-                background-color: #FF79DA;
+                @include box-shadow-card;
+                             
                 
                 .essai{
                     display: flex;
@@ -120,7 +125,7 @@ main{
                             padding: 0 0 10px 0;
                             overflow: hidden;
                             text-overflow: ellipsis;
-                white-space: nowrap;
+                            white-space: nowrap;
                         }
                         p{
                             font-family: 'Raleway', sans-serif;
@@ -132,7 +137,8 @@ main{
                     &__price{
                         padding: 15px 20px;
                         display: flex;
-                        align-items: center;
+                        align-items: flex-end;
+                        margin-right: 15px;
 
                     }
                     &__check{
@@ -173,24 +179,6 @@ main{
             justify-content: center;
             padding-bottom: 20px;
 
-            .btn{
-                border-radius: 50px;
-                background: linear-gradient(var(--secondaire),var(--primaire));
-                font-size: 18px;
-                padding: 20px;
-                width: 250px;
-                box-shadow: 5px 0 8px 3px rgb(196 191 191);;
-                text-align: center;
-                text-decoration: none;
-                color: white;
-                margin: 20px;
-                cursor: pointer;
-                &:hover{
-                    background: linear-gradient( lighten(#FF79DA, 5) 0%, lighten(#9356DC, 10) 100%);
-                    box-shadow: 5px 0 12px 7px rgb(196 191 191);
-
-                 }
-            }
         }
         
     }
