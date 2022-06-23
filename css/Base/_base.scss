@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@500&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&family=Shrikhand&display=swap');
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -17,7 +17,7 @@
 
   }
   @mixin box-shadow-card{
-    box-shadow: 5px 10px 5px rgb(224, 223, 223);
+    box-shadow: 4px 9px 5px #EFEFEF;
   }
   @mixin box-shadow-btn {
     box-shadow: 10px 5px 5px rgb(230, 230, 230);
@@ -50,4 +50,26 @@ p{
      background: linear-gradient( lighten(#FF79DA, 5) 0%, lighten(#9356DC, 10) 100%);
      box-shadow: 5px 0 12px 7px rgb(196 191 191);
   }
+}
+
+.container-load {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  animation: load 1s;
+  animation-delay: 4999ms;
+  animation-fill-mode: both;
+  z-index: 100;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.load {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
 }

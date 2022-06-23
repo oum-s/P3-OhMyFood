@@ -1,28 +1,7 @@
 $size: 30px;
 $anim-dur: 1000ms;
-// ici / veut dire divisé
 $anim-delay: $anim-dur / 3 ;
-$anim-load : $anim-delay + $anim-dur;
-.container-load {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    animation: load 1s;
-    animation-delay: 4999ms;
-    animation-fill-mode: both;
-    z-index: 100;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
 .load {
-    width: 300px;
-    height: 250px;
-    display: flex;
-    justify-content: space-evenly;
     
     &__bar {
         background-color: var(--primaire);
@@ -32,7 +11,6 @@ $anim-load : $anim-delay + $anim-dur;
    iteration-count | direction | fill-mode | play-state | name */
         animation: bars $anim-dur .3s backwards infinite ease-in-out alternate;
         @for $i from 1 through 3 {
-            // CREER LA CLASSE .load__bar--1 , 2 etc
             &--#{$i} {
                 animation-delay: 1s * $i;
              }
@@ -61,70 +39,47 @@ $anim-load : $anim-delay + $anim-dur;
 // apparition progressive des plats
 
 .menu__card {
+            // name | duration
  animation: fading .5s;
+//  permet de faire réaparaitre les div (comme une mini boucle)
  animation-fill-mode: both;
- animation-delay: 500ms;
+ animation-delay: .5s;
  
  @for $i from 1 through 3 {
-    // CREER LA CLASSE .load__bar--1 , 2 etc
     &--#{$i} {
         animation-delay: 200ms * $i;
-        
      }
 }
 @for $i from 1 through 4 {
-    // CREER LA CLASSE .load__bar--1 , 2 etc
     &--#{$i} {
         animation-delay: 200ms * $i;
-        
      }
 }
 }
+
+
 @keyframes fading {
     0% {
-        /*  transform: scaleY(0.0); */
         opacity: 0;
     }
-    // 25% {
-    //    /*  transform: scaleY(0.25); */
-    //     opacity: 0.25;
-    // }
-    // 50% {
-    //     /* transform: scaleY(0.5); */
-    //     opacity: 0.5;
-    // }
     100% {
-       /*  transform: scaleY(1.0); */
         opacity: 1;
     }
 }
-// check
+// CHECK VALIDATION
 .menu__card{
     &:hover{
-        &__txt{
-        text-overflow: ellipsis;
-        }
-        
         .menu__card__check{
             // pour faire apparaitre la div check
              margin-right: -2px;
- .fa-check{
 
-                transform: rotate(360deg) ;
-                // car sinon l'icone commencerait à tourner bien avant d'apparaitre
-                transition-delay: 200ms;
-                transition : transform 500ms ease-in-out ;
-             }
-            
-        }
+                            .fa-check{
+                                        transform: rotate(360deg) ;
+                                        // car sinon l'icone commencerait à tourner bien avant d'apparaitre
+                                        transition-delay: 200ms;
+                                        transition : transform .5s ease-in-out ;
+                                        }
+                          }
 
     }
 }
-// @keyframes flip{
-//     from{
-//         rotate: 0deg;
-//     }
-//     to{
-//         rotate: 360deg;
-//     }
-// }
