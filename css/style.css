@@ -30,7 +30,8 @@ p {
 }
 
 .btn {
-  background: linear-gradient(var(--secondaire), var(--primaire));
+  background: linear-gradient(0deg, var(--secondaire), var(--primaire));
+  /* 90deg, var(--secondaire) 0%, rgba(9,9,121,1) 35%, var(--primaire) 100% */
   font-size: 18px;
   padding: 20px;
   width: 250px;
@@ -129,10 +130,13 @@ nav .localisation__dtl__p {
   padding-bottom: 45px;
 }
 .reservation__dtl {
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* .btn--width{
+     width: 50%;
+  } */
 }
 .reservation__dtl__texte {
   text-align: center;
@@ -328,6 +332,60 @@ footer .footer__dtl p {
   font-size: 20px;
 }
 
+/* telephones */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .reservation__dtl__texte {
+    max-width: 335px;
+  }
+
+  .restau__vignette a {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .fonctionnement {
+    flex-direction: column;
+  }
+
+  .fonctionnement__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 874px) {
+  .fonctionnement__btn {
+    max-width: 30%;
+  }
+  .fonctionnement__list {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 875px) {
+  .btn--width {
+    width: 100%;
+  }
+
+  .fonctionnement__btn {
+    width: 25%;
+  }
+  .fonctionnement__btn i {
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 968px) and (max-width: 1048px) {
+  .fonctionnement__btn {
+    width: 25%;
+  }
+  .fonctionnement__btn i {
+    padding: 0 20px;
+  }
+}
 .arrow__logo {
   display: flex;
   flex-direction: row;
@@ -471,30 +529,6 @@ main .container__page .menu__btn {
   padding-bottom: 20px;
 }
 
-/* telephones */
-@media screen and (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-
-  .reservation__dtl__texte {
-    max-width: 335px;
-  }
-
-  .restau__vignette a {
-    width: 90%;
-    flex-direction: column;
-  }
-
-  .fonctionnement {
-    flex-direction: column;
-  }
-
-  .fonctionnement__list {
-    display: flex;
-    flex-direction: column;
-  }
-}
 .load__bar {
   background-color: var(--primaire);
   height: 100%;

@@ -172,28 +172,3 @@ main{
 
 
 
-/* telephones */
-@media screen and (max-width : 768px){
-   body{
-        flex-direction: column;
-    }
-
-    .reservation__dtl__texte{
-        max-width: 335px;
-    }
-
-    .restau__vignette a{
-        width: 90%;
-        flex-direction: column;
-    }
-// TROUVER COMMENT UNIFIER LE BTN
-// fonctionne pas !!
-.fonctionnement{
-    flex-direction: column;
-}
-.fonctionnement__list{
-    display: flex;
-    flex-direction: column;
-}
-
-}
