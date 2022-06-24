@@ -6,378 +6,343 @@
  .fonctionnement, .restau {
      padding-bottom: 30px;
  }
- nav {
+nav {
          display: flex;
          flex-direction: column;
          align-items: center;
-         
-             .logo__header{
-                 max-width: 200px;
-                 display: flex;
-                 justify-content: center;
-                 margin: auto;
- 
-                     img{
-                         width: 100%;
-                         height: 75px;
-                         align-self: center;
-                         object-fit: contain;
-                     }
-             }
-              .localisation{
-                             // FAIRE LE TOP GRIS FLOUTé
-                             background-color: var(--gris-bg);
-                             width: 100%;
-                             display: flex;
-                             justify-content: center;
-                             color: rgb(70, 68, 68);
-                             &__dtl{
-                                 width: 260px;
-                                 display: flex;
-                                 justify-content: center;
-                                 align-items: center;
-                                 form{
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content:space-between;
-                                    .i-search{
-                                    font-size: 22px;
-                                    height: 43px;
-                                    width: 80px;
-                                    background-color: var(--fondGris);
-                                    border-top-left-radius: 13px;
-                                    border-bottom-left-radius: 13px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    i{
-                                        font-size: 22px;
-                                        color: black;
-                                    }
-                                }
-                                }
-                                .input-search{
-                                    border-style: none;
-                                    width: 100%;
-                                    height: 43px;
-                                    font-weight: 700;
-                                    font-size: 18px;
-                                    background-color: var(--gris-bg);
-                                }
-                                 
- 
-                             /*     i{
-                                     font-size: 22px;
- 
-                                             }
-                                 &__p{
-                                     padding: 0 30px;
-                                     font-size: 25px;
-                                 } */
- 
-                             }
- 
-                             }
-       
-                             
-                         
-                     }
- 
- .reservation{
-     background-color: var(--gris-bg-clair);
-     width: 100%;
-     display: flex;
-     justify-content: center;
-     padding-bottom: 45px;
-             &__dtl{
-                 width: 90%;
-                 display: flex;
-                 flex-direction: column;
-                 align-items: center;
- 
-                 &__texte{
-                         text-align: center;
-                         /* width: 305px; */
-                 }
-                 /* .btn--width{
-                    width: 50%;
-                 } */
- 
-             }
- }
- 
- /* FONCTIONNEMENT */
- .fonctionnement{
-     background-color: white;
-     display: flex;
-     flex-direction: column;
- 
-     &__list{
-         display: flex;
-         align-items: center;
-         justify-content: space-evenly;
-     }
-     &__btn{
-             background-color: var(--gris-bg);
-             @include box-shadow-btn;
-             display: flex;
-             justify-content: flex-start;
-             align-items: center;
-             border-radius: 30px;
-             text-align: center;
-             margin: 15px 10px;
-             width: 100%;
-             max-width: 335px;
-             padding: 7px 0px;
-             i{
-                 padding: 0 20px;
-                 color: #858585;
-                 font-size: 1.5em;
-             }
- 
-                 // modif num
-                     .number {
-                         color: white;
-                         background-color: var(--primaire);
-                         padding: 10px 12px;
-                         margin-left: -16px;
-                         border-radius: 50%;
-                         align-self: center;
-                         max-height: 52px;
-                         font-size: 14px;
- 
-                         p{
-                         color: white;
-                         font-size: 12px;
-                         align-self: center;
-                         text-align: center;
-                         }
-                     }
-         
-         }
-     }
- 
- 
- 
- 
- 
- /* LISTE DE RESTAURANTS */
- .restau{
-     background-color: var(--gris-bg);
-     &__vignette{
-         display: flex;
-         flex-direction: row;
-         justify-content: space-around;
-         flex-wrap: wrap;
-         align-content: center;
-         align-items: center;
- 
-                         a{
-                             display: block;
-                             text-decoration: none;
-                             width: 40%;
-                             color: black;
-                         }
- 
-                         &__liste{
-                             width: 100%;
-                             text-decoration: none;
-                             color: black;
-                             border-radius: 18px;
-                             display: flex;
-                             flex-direction: column;
-                             margin: 20px 0;
-                             @include box-shadow-card;
-                             
-                         }
-                             &__img{
-                                 height: 220px;
-                                 width: 100%;
-                                 border-top-left-radius: 13px;
-                                 border-top-right-radius: 13px;
-                                 overflow: hidden;
-                                 position: relative;
-                         
-                                 img{
-                                     width: 100%;
-                                     height: 100%;
-                                     object-fit: cover;
-                                     object-position: 50% 50%;
-                                 }
-                                 .nouveau{
-                                     
-                                     border-radius: 3px;
-                                     position: absolute;
-                                     top: 17px;
-                                     right: 12px;
-                                     background-color: var(--tertiaire);
-                                     color: green;
-                                     padding: 0px 15px;
- 
-                                     p{
-                                         margin: 9px 0;
-                                     }
- 
-                                 }
-                             }
- 
-                             &__dtl{
-                                 
-                                 padding: 5% 5%;
-                                 /* width: 100%; */
-                                 display: flex;
-                                 justify-content: space-between;
-                                 align-items: center;
-                                 background-color: white;
-                                 border-bottom-left-radius: 18px;
-                                 border-bottom-right-radius: 18px;
-                                 position: relative;
-                                 &__txt{
-                                     text-align: justify;
-                                     width: 100%;
- 
-                                     h4{
-                                         margin: 5px 0;
-                                         font-size: 20px;
-                                         font-weight: bolder;
-                                     }
-                                     p{
-                                         margin: 0;
- 
-                                     }
-                                 }
-                                 
-                                 
-                             
-                         }
-                         
-     }
- }
-    .btn__like {
-        height: 35px;
-        width: 40px;
-     /*    background-color: transparent;
-        border: transparent 0px solid; */
-        padding: 0;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        cursor: pointer;
-        position: relative;
-        /* background-color: black; */
-        &:hover .fas{
-            opacity: 1;
-        }
-    .fa-heart{
-        position: absolute;
-        top: 0px;
-        right: 0px;
+         .logo{
+            box-shadow: 0px 14px 14px -14px #d3d3d3;
+            width: 100%;
+            .logo__header{
+                max-width: 200px;
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                
+                            img{
+                                width: 100%;
+                                height: 75px;
+                                align-self: center;
+                                object-fit: contain;
+                            }
+                        }
+                }     
     }
-    .fas{
-        opacity: 0;
-        color: transparent;
-        background: linear-gradient(var(--secondaire),var(--primaire));
-        background-clip: text;
-        -webkit-background-clip: text;
-        transition: all 300ms ease-in-out;
-        
-    }
-    }
+ 
+main{
+        .localisation{
+        padding: 10px 0px;
+        background-color: #EAEAEA;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: rgb(70, 68, 68);
 
- /* FOOTER */
- // CHANGER LA COULEUR DU LOGO 
- footer{
-     color: white;
-     background-color: rgb(73, 73, 73);
-     display: flex;
-     justify-content: flex-start;
-     flex-direction: column;
-     
-     padding: 2% 0 4% 2%;
-     align-items: flex-start;
- 
-     .footer__logo{
-                 
-         width: 150px;
- 
-             img{
-                 width: 100%;
-                 height: 75px;
-                 align-self: center;
-                 object-fit: contain;
-             }
-         }
-     .footer__dtl{
-         display: flex;
-         flex-direction: row;
-         align-items: center;
- 
-         i{
-             padding-right: 10px;
-         }
-         p{
-             margin: 7px 0;
-             font-size: 20px;
-         }
-     }
- }
+            &__dtl{
+                width: 260px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 20px;
+
+                    form{
+                    display: flex;
+                    align-items: center;
+                    justify-content:space-between;
+                        .i-search{
+                        font-size: 22px;
+                        height: 43px;
+                        width: 80px;
+                        background-color: var(--fondGris);
+                        border-top-left-radius: 13px;
+                        border-bottom-left-radius: 13px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+                        }
+            .input-search{
+                border-style: none;
+                width: 100%;
+                height: 30px;
+                font-weight: 700;
+                font-size: 18px;
+                background-color: #EAEAEA;
+            }
+                
+
+            /*     i{
+                    font-size: 22px;
+
+                            }
+                &__p{
+                    padding: 0 30px;
+                    font-size: 25px;
+                } */
+
+            }
+
+        }
+
+        .reservation{
+            background-color: var(--gris-bg);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0 45px 0;
+                    &__dtl{
+                        width: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+        
+                        &__texte{
+                                text-align: center;
+                                /* width: 305px; */
+                                @media (max-width: 768px) {
+                                    max-width: 335px;
+                        }
+                        /* .btn--width{
+                           width: 50%;
+                        } */
+        
+                    }
+        }
+    }
+        
+        /* FONCTIONNEMENT */
+        .fonctionnement{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        
+            &__list{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                display: flex;
+                @media (max-width: 599px) {
+                    flex-direction: column;
+                    margin: 0 20px;
+                                            }
+                @media screen and (min-width : 769px) and (max-width : 874px){
+                    display: flex;
+                    justify-content: space-around;
+                }
+                                      
+            }
+            &__btn{
+                    background-color: var(--gris-bg);
+                    @include box-shadow-btn;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-radius: 30px;
+                    text-align: center;
+                    margin: 15px 10px;
+                    width: 100%;
+                    max-width: 335px;
+                    padding: 7px 0px;
+                    @media screen and (min-width : 769px) and (max-width : 874px) {
+                        max-width: 30%;
+                    }
+                    @media screen and (min-width : 875px){
+                                        .fonctionnement__btn{
+                                            width: 25%;
+                                            i{
+                                            padding: 0 10px;
+                                            }
+                                        }
+                                    
+                                                         }   
+                    @media screen and (min-width : 968px) and (max-width: 1048px){
+                        width: 25%;
+                    }
+                    // modif num
+                    .number {
+                        color: white;
+                        background-color: var(--primaire);
+                        padding: 10px 12px;
+                        margin-left: -16px;
+                        border-radius: 50%;
+                        align-self: center;
+                        max-height: 52px;
+                        font-size: 14px;
+
+                        p{
+                        color: white;
+                        font-size: 12px;
+                        align-self: center;
+                        text-align: center;
+                        }
+                    }             
+                    i{
+                        padding: 0 20px;
+                        color: #858585;
+                        font-size: 1.5em;
+
+                    }
+                    p{
+                        font-weight: 500;
+                    }
+            } 
+                   
+                
+            }
+        
+        /* LISTE DE RESTAURANTS */
+        .restau{
+            background-color: var(--gris-bg);
+            p{
+               font-size: 22px;
+            }
+            &__vignette{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                    
+                @media (max-width: 768px) {
+                flex-direction: column;
+                }
+        
+                                a{
+                                    display: block;
+                                    text-decoration: none;
+                                    width: 40%;
+                                    color: black;
+
+                                    @media (max-width: 768px) {
+                                        width: 90%;
+                                        display: flex;
+                                        }
+                                    
+                                }
+        
+                                &__liste{
+                                    width: 100%;
+                                    text-decoration: none;
+                                    color: black;
+                                    border-radius: 18px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin: 20px 0;
+                                    @include box-shadow-card;
+                                    
+                                }
+                                    &__img{
+                                        height: 220px;
+                                        width: 100%;
+                                        border-top-left-radius: 13px;
+                                        border-top-right-radius: 13px;
+                                        overflow: hidden;
+                                        position: relative;
+                                
+                                        img{
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            object-position: 50% 50%;
+                                        }
+                                        .nouveau{
+                                            
+                                            border-radius: 3px;
+                                            position: absolute;
+                                            top: 17px;
+                                            right: 12px;
+                                            background-color: var(--tertiaire);
+                                            color: green;
+                                            padding: 0px 15px;
+        
+                                            p{
+                                                margin: 9px 0;
+                                            }
+        
+                                        }
+                                    }
+        
+                                    &__dtl{
+                                        
+                                        padding: 5% 5%;
+                                        /* width: 100%; */
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        background-color: white;
+                                        border-bottom-left-radius: 18px;
+                                        border-bottom-right-radius: 18px;
+                                        position: relative;
+                                        &__txt{
+                                            text-align: justify;
+                                            width: 100%;
+        
+                                            h4{
+                                                margin: 5px 0;
+                                                /* font-size: 20px; */
+                                                font-weight: bolder;
+                                            }
+                                            p{
+                                                margin: 0;
+        
+                                            }
+                                        }
+                                        
+                                        
+                                    
+                                }
+                                
+            }
+        }
+        .btn__like {
+            height: 35px;
+            width: 40px;
+        /*    background-color: transparent;
+            border: transparent 0px solid; */
+            padding: 0;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            cursor: pointer;
+            position: relative;
+            /* background-color: black; */
+            &:hover .fas{
+                opacity: 1;
+            }
+        .fa-heart{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        .fas{
+            opacity: 0;
+            color: transparent;
+            background: linear-gradient(var(--secondaire),var(--primaire));
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: all 300ms ease-in-out;
+            
+        }
+        }
+}
 
 /* telephones */
-@media screen and (max-width : 768px){
-    body{
-         flex-direction: column;
-     }
- 
-     .reservation__dtl__texte{
-         max-width: 335px;
-     }
- 
-     .restau__vignette a{
-         width: 90%;
-         flex-direction: column;
-     }
- .fonctionnement{
-     flex-direction: column;
- }
- .fonctionnement__list{
-     display: flex;
-     flex-direction: column;
-     margin: 0 20px;
- }
- 
-}
- 
-@media screen and (min-width : 769px) and (max-width : 874px){
-    .fonctionnement{
-        &__btn{
-            max-width: 30%;
 
-        }
-        &__list{
-        display: flex;
-        justify-content: space-around;
-    }
-}
-}
+ 
 
-@media screen and (min-width : 875px){
-    .btn--width{
-        width: 100%;
-    }
-    .fonctionnement__btn{
-        width: 25%;
-        i{
-        padding: 0 10px;
-        }
-    }
 
-}
-@media screen and (min-width : 968px) and (max-width: 1048px){
-    .fonctionnement__btn{
-        width: 25%;
-        i{
-            padding: 0 20px;
-            }
-    }
-}
+// @media screen and (min-width : 875px){
+//    /*  .btn--width{
+//         width: 100%;
+//     } */
+//     .fonctionnement__btn{
+//         width: 25%;
+//         i{
+//         padding: 0 10px;
+//         }
+//     }
+
+// }
+
 

@@ -17,16 +17,16 @@
 
   }
   @mixin box-shadow-card{
-    box-shadow: 4px 9px 5px #EFEFEF;
+    box-shadow: 1px 8px 12px 8px rgb(230 230 230);
   }
   @mixin box-shadow-btn {
-    box-shadow: 10px 5px 5px rgb(230, 230, 230);
+    box-shadow: 10px 5px 5px #EFEFEF;
   }
   h2{
     font-size: 2em;
 }
 h3{
-    font-size: 1.5em;
+    font-size: 1.7em;
     padding-top: 30px;
     padding-left: 25px;
     padding-right: 25px;
@@ -34,9 +34,14 @@ h3{
 p{
     font-size: 18px;
 }
+h4{
+  font-size: 1.5em;
+}
+
 .btn{  
-  background: linear-gradient(0deg,var(--secondaire),var(--primaire));
+  background: linear-gradient(0deg,var(--primaire),var(--secondaire));
   /* 90deg, var(--secondaire) 0%, rgba(9,9,121,1) 35%, var(--primaire) 100% */
+  font-weight: 500;
   font-size: 18px;
   padding: 20px;
   width: 250px;
@@ -73,4 +78,50 @@ p{
   height: 250px;
   display: flex;
   justify-content: space-evenly;
+}
+
+// FOOTER
+ footer{
+  
+  color: white;
+  background-color: rgb(73, 73, 73);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  
+  padding: 14px 0px 50px 33px;
+  align-items: flex-start;
+  .footer__logo{
+              
+      width: 150px;
+
+          img{
+              width: 100%;
+              height: 75px;
+              align-self: center;
+              object-fit: contain;
+          }
+      }
+  .footer__dtl{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      i{
+          padding-right: 10px;
+      }
+      p, a{
+        text-decoration: none;
+          margin: 7px 0;
+          font-size: 20px;
+          color: white;
+      }
+  }
+  // logo footer
+  h5{
+    font-family: "Shrikhand", cursive;
+    font-size: 1.7em;
+    font-weight: 200;
+    margin: 20px 0;
+  }
 }

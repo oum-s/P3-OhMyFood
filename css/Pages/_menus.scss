@@ -41,46 +41,55 @@ main{
         height: 100%;
         width: 100%;
         // modification des tailles pour que le texte des menus soient pas épasé
-        h3{
+       /*  h3{
             font-size: 16px;
-        }
+        } */
         p{
             font-size: 15px;
             margin: 0;
             font-weight: bold;
         }
 
-        .menu{
-
-            &__title{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                 // TITRE DE LA PAGE
-                        &--h1{
-                                margin: 20px 0;
-                                font-family: 'Shrikhand', cursive;
-                                font-size: 30px;
-                            }
-                        .menu__like{
-                            height: 50px;
-                            margin: 0 20px;
-
+        .menu__title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+             // TITRE DE LA PAGE
+                    &--h1{
+                            margin: 20px 0;
+                            font-family: 'Shrikhand', cursive;
+                            font-weight: 200;
                         }
+                    .menu__like{
+                        height: 50px;
+                        margin: 0 20px;
+
+                    }
+        }
+        .menu{
+            @media screen and (min-width: 992px) {
+                display: flex;
             }
+            
            
 
             &__dtl{
                 margin-bottom: 40px;
-
+                @media screen and (min-width: 992px) {
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    width: 35%;
+                }
                 &__title{
                     color: #636060;
                     text-transform: uppercase;
-                    font-size: 18px;
+                    font-size: 1.3em;
                     margin: 20px 0 0 0;
                     // position relative/absolute pour avoir le after en bar 
                     position: relative;
                     padding-bottom: 8px;
+                    font-weight: 400;
                     &::after{
                         content: "";
                         width: 50px;
@@ -103,6 +112,10 @@ main{
                 opacity: 0;
                 overflow: hidden;
                 @include box-shadow-card;
+                @media screen and (min-width: 992px) {
+                    width: 90%;
+                }
+                
                 
                     &__txt{
                         /* flex: 1; */
@@ -113,7 +126,7 @@ main{
                         // pour que le texte laisse sa place au price 
                         overflow: hidden;
                         h3{
-                            font-size: 20px;
+                            font-size: 1.4em;
                             margin: 0;
                             padding: 0 0 10px 0;
                             overflow: hidden;
@@ -122,6 +135,7 @@ main{
                         }
                         p{
                             
+                           font-weight: 400;
                             overflow: hidden;
                             text-overflow: ellipsis;
                             white-space: nowrap;
