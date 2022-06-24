@@ -58,28 +58,6 @@ h4{
   }
 }
 
-.container-load {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  animation: load 1s;
-  animation-delay: 4999ms;
-  animation-fill-mode: both;
-  z-index: 100;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.load {
-  width: 300px;
-  height: 250px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
 // FOOTER
  footer{
   
