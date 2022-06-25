@@ -22,7 +22,7 @@ $anim-delay: $anim-dur / 3 ;
 
 .container-load{
     animation: load 1s;
-    animation-delay: 4999ms;
+    animation-delay: 500ms;
     animation-fill-mode: both;
     .load {
     
@@ -43,7 +43,16 @@ $anim-delay: $anim-dur / 3 ;
     }
 }
 
-
+// BOUTON LIKE
+.btn_like{
+    .fas{
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+    &:hover .fas{
+        opacity: 1;
+    }
+}
 
 // apparition progressive des plats
 @keyframes fading {

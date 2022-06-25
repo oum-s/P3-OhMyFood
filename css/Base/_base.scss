@@ -12,31 +12,34 @@
     --gris-bg : #F6F6F6;
     --gris-bg-clair : #FFFFFF;
     --txt : #858585;
-
-
-
   }
+
+  // MIXINS 
   @mixin box-shadow-card{
     box-shadow: 1px 8px 12px 8px rgb(230 230 230);
   }
   @mixin box-shadow-btn {
     box-shadow: 10px 5px 5px #EFEFEF;
   }
+
+  // font-size
   h2{
     font-size: 2em;
-}
-h3{
-    font-size: 1.7em;
-    padding-top: 30px;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-p{
-    font-size: 18px;
-}
-h4{
-  font-size: 1.5em;
-}
+  }
+  h3{
+      font-size: 1.7em;
+      padding-top: 30px;
+      padding-left: 25px;
+      padding-right: 25px;
+  }
+  p{
+      font-size: 18px;
+  }
+  h4{
+    font-size: 1.5em;
+  }
+
+  // BOUTON VIOLET
 
 .btn{  
   background: linear-gradient(0deg,var(--primaire),var(--secondaire));
@@ -55,6 +58,30 @@ h4{
   &:hover{
      background: linear-gradient( lighten(#FF79DA, 5) 0%, lighten(#9356DC, 10) 100%);
      box-shadow: 5px 0 12px 7px rgb(196 191 191);
+  }
+}
+
+// BOUTON LIKE
+.btn__like {
+  height: 35px;
+  width: 40px;
+  padding: 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor: pointer;
+  position: relative;
+  
+  .fa-heart{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+  }
+  .fas{
+      color: transparent;
+      background: linear-gradient(var(--secondaire),var(--primaire));
+      background-clip: text;
+      -webkit-background-clip: text;
   }
 }
 
