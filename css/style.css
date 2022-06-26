@@ -53,32 +53,6 @@ h4 {
   box-shadow: 5px 0 12px 7px rgb(196, 191, 191);
 }
 
-.container-load {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  -webkit-animation: load 1s;
-          animation: load 1s;
-  -webkit-animation-delay: 4999ms;
-          animation-delay: 4999ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.load {
-  width: 300px;
-  height: 250px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
 footer {
   color: white;
   background-color: rgb(73, 73, 73);
@@ -126,6 +100,25 @@ footer h5 {
 
 .fonctionnement, .restau {
   padding-bottom: 30px;
+}
+
+.container-load {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-load .load {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 nav {
@@ -217,10 +210,6 @@ main .reservation__dtl {
 }
 main .reservation__dtl__texte {
   text-align: center;
-  /* width: 305px; */
-  /* .btn--width{
-     width: 50%;
-  } */
 }
 @media (max-width: 768px) {
   main .reservation__dtl__texte {
@@ -400,15 +389,12 @@ main .restau__vignette__dtl__txt p {
 main .btn__like {
   height: 35px;
   width: 40px;
-  /*    background-color: transparent;
-      border: transparent 0px solid; */
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   position: relative;
-  /* background-color: black; */
 }
 main .btn__like:hover .fas {
   opacity: 1;
@@ -427,7 +413,6 @@ main .btn__like .fas {
   transition: all 300ms ease-in-out;
 }
 
-/* telephones */
 .arrow__logo {
   display: flex;
   flex-direction: row;
@@ -465,9 +450,6 @@ main .container__page {
   padding: 20px 20px;
   height: 100%;
   width: 100%;
-  /*  h3{
-       font-size: 16px;
-   } */
 }
 main .container__page p {
   font-size: 15px;
@@ -538,7 +520,6 @@ main .container__page .menu__card {
   }
 }
 main .container__page .menu__card__txt {
-  /* flex: 1; */
   flex-direction: column;
   text-align: justify;
   width: 100%;
@@ -591,28 +572,6 @@ main .container__page .menu__btn {
   padding-bottom: 20px;
 }
 
-.load__bar {
-  background-color: var(--primaire);
-  height: 100%;
-  width: 30px;
-  /* @keyframes duration | timing-function | delay |
-  iteration-count | direction | fill-mode | play-state | name */
-  -webkit-animation: bars 1000ms 0.3s backwards infinite ease-in-out alternate;
-          animation: bars 1000ms 0.3s backwards infinite ease-in-out alternate;
-}
-.load__bar--1 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.load__bar--2 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-.load__bar--3 {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
 @-webkit-keyframes bars {
   from {
     transform: scaleY(0.5);
@@ -644,6 +603,52 @@ main .container__page .menu__btn {
   100% {
     opacity: 0;
     z-index: -1;
+  }
+}
+.container-load {
+  -webkit-animation: load 1000ms;
+          animation: load 1000ms;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.container-load .load__bar {
+  background-color: var(--primaire);
+  height: 100%;
+  width: 30px;
+  /* @keyframes name |duration | timing-function | delay | iteration-count | direction | fill-mode   */
+  -webkit-animation: bars 1000ms ease-in-out infinite alternate backwards;
+          animation: bars 1000ms ease-in-out infinite alternate backwards;
+}
+.container-load .load__bar--1 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.container-load .load__bar--2 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+.container-load .load__bar--3 {
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
+}
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .menu__card {
@@ -683,28 +688,13 @@ main .container__page .menu__btn {
           animation-delay: 800ms;
 }
 
-@-webkit-keyframes fading {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fading {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.menu__card .fa-check {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
 }
 .menu__card:hover .menu__card__check {
   margin-right: -2px;
 }
 .menu__card:hover .menu__card__check .fa-check {
   transform: rotate(360deg);
-  transition-delay: 200ms;
-  transition: transform 0.5s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
