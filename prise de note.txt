@@ -1,1 +1,7 @@
 Chaque itération à travers la boucle produira un nouveau sélecteur, avec le numéro d'index de l'itération utilisé dans son nom, ainsi que pour multiplier le  $anim-delay  et créer un délai de lancement qui sera incrémenté au fur et à mesure.  $anim-delay  est réglé sur la durée de l'animation divisée par le nombre de barres.
+
+- une **propriété CSS** à modifier ;
+- une **valeur initiale** pour votre propriété CSS ;
+- une **valeur finale** pour cette même propriété ;
+- une **durée** ;
+- un **événement** pour déclencher votre transition.
